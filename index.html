@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KIS Package Manager</title>
+        <link rel="icon" href="ico.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="top">
+            <h1>Keeping It Simple: Package Manager</h1>
+            <p><a href="/download">Download</a> || <a href="/about">About</a> || <a href="/docs">Documentation</a></p>
+            <p>Website incomplete, some pages might be empty.</p>
+        </section>
+        <hr>
+        <section class="content">
+            <p>Welcome to the "Keeping It Simple Package Manager", a simple package management script coming to ask a simple question. Does package management have to be this complex? On all fronts, the answer is no. This project aims to prove that all package mananagers need are a simple set of scripts. We designed the whole system to be as simple, easy, and quick as possible. Current package managers for Linux and BSD are more complicated than they have to be. Building a package on most systems require complex build scripts, insane and idiotic files and designs, unneeded complexity. FreeBSD's package manager is the best to describe how even in most best case scenarios in package management, it's way too complicated.</p>
+            <p>FreeBSD, you build a port, add it to the rest of the ports, then done. However, it takes 3 or more files, one of them is a Makefile which have irritating syntax, they require the code in an external place anyways, you probably need a couple other weird files, and the make file adds insult to injury by having a dependency Makefile to be linked in order to work! Plus, the work for the FreeBSD devs to get those ports as packages is difficult, and hosting your own package manager source is not really too easy. And remember, FreeBSD has a better package management build system.</p>
+            <p>The question to answer to "Can we make package management simple?" is yes. Welcome to KISPM. While KISPM is not much more than an experiment, even going as far as to not bother with makesums like every other package manager, it does work.</p>
+            <br>
+            <h2>Design</h2>
+            <p>Making a KISPM file is as easy as writing the commands to compile your script in the first place. Here is the list of design choices made to make KISPM easy:</p>
+            <ul>
+                <li>There are only two required files, <code>manifest.kis</code> and <code>build.kis</code>.</li>
+                <li>Running a repository is simple as possible. It will be in the <a href="/docs/repo">Repo Documentation</a>.</li>
+                <li>Making a build script is essentially making a shell script. Read <a href="/docs/packages/build.html"><code>build.kis</code> Documentation</a>.</li>
+                <li>Both <code>manifest.kis</code> and <code>build.kis</code> are available specifically tools for repo owners.</li>
+                <li>Install commands are easy to read and understand.</li>
+                <li>Adding a new repo is simple, read <a href="/docs/getting-started">Getting Started</a>.</li>
+            </ul>
+            <br>
+            <h2>Purpose</h2>
+            <p>Here are the four goals of the KISPM project.</p>
+            <ul>
+                <li>Make things simple for developers.</li>
+                <li>Make repo hosting simple.</li>
+                <li>Make it accessable.</li>
+                <li>Keep It Simple, Stupid.</li>
+            </ul>
+            <br>
+            <h2>To Note</h2>
+            <p>This project is more of a concept than a long-term project. However, as we are keeping it simple, using this as long as the C++ code works and runs, KISPM should just keep working, and can be expanded upon with important actual features for a proper package manager based on KISPM philosophy, or expanding KISPM itself if the idea continues going strong.</p>
+            <p>As KISPM currently is just an experiment, it does have the bare minimum, and only expands on itself where it is needed, or ultimately wanted. KISPM is a project aiming to build a base standard. Something a lot of package managers and custom repo hosting systems like Launchpad, the AUR, and self-hosted solutions remove is the simplicity and sanity. The core issue also comes from so-called "solutions" to the multi-OS package management issues are generally severely problematic.</p>
+            <p>KISPM has some missing features, it doesn't do checksums, it doesn't handle dependency checking, displaying package information just displays the manifest in whole (including the src, where that is the location of the tar.xz file), it only does tar.xz/txz files.</p>
+        </section>
+        <hr>
+        <footer>
+            &copy; Kai Lyons<br>
+            <p>
+                <a href="https://github.com/KISPM">KISPM GitHub</a>
+                <a href="https://github.com/loralighte">Kai's GitHub</a>
+                <a href="https://twitter.com/loralighte">Kai's Main Twitter</a>
+                <a href="https://twitter.com/loradarke">Kai's Alt Twitter</a>
+            </p>
+        </footer>
+    </body>
+</html>
